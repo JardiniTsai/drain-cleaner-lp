@@ -5,670 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>廚房水管疏通劑 - 30秒自己搞定，省下$1,600</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif; line-height: 1.6; overflow-x: hidden; color: #333; }
+        img { max-width: 100%; height: auto; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section */
+        /* Hero */
         .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-usage.webp');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('hero-usage.webp') center/cover no-repeat;
+            min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 40px 20px;
         }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 0 20px;
+        .hero-content { max-width: 700px; }
+        .hero h1 { font-size: 2.8rem; font-weight: 900; color: #FF4444; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); margin-bottom: 16px; line-height: 1.3; }
+        .hero h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 30px; }
+        .price-box { background: rgba(255,255,255,0.95); padding: 24px; border-radius: 15px; margin-bottom: 30px; color: #333; }
+        .price-box .compare { display: flex; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+        .price-box .compare .old { color: #888; text-decoration: line-through; }
+        .price-box .compare .save { color: #FF4444; font-weight: 700; font-size: 1.1rem; }
+        .price-box .final { font-size: 2rem; font-weight: 900; color: #FF4444; }
+        .price-box .final .was { color: #888; font-size: 1.2rem; text-decoration: line-through; margin-right: 8px; }
+        .cta-btn {
+            display: inline-block; background: linear-gradient(45deg, #FF4444, #FF6666); color: #fff; font-size: 1.3rem; font-weight: 700;
+            padding: 18px 40px; border: none; border-radius: 50px; text-decoration: none;
+            box-shadow: 0 8px 25px rgba(255,68,68,0.4); animation: pulse 2s infinite; cursor: pointer;
         }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #FF4444;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-            margin-bottom: 20px;
-        }
-
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #FFFFFF;
-            margin-bottom: 40px;
-        }
-
-        .price-box {
-            background: rgba(255,255,255,0.95);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 40px 0;
-            color: #333;
-        }
-
-        .price-comparison {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .price-comparison .crossed-out {
-            color: #666;
-            text-decoration: line-through;
-        }
-
-        .price-comparison .save-amount {
-            color: #FF4444;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .price-main {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #FF4444;
-        }
-
-        .price-main .old-price {
-            color: #666;
-            font-size: 1.5rem;
-            text-decoration: line-through;
-            margin-left: 10px;
-        }
-
-        .cta-button {
-            background: linear-gradient(45deg, #FF4444, #FF6666);
-            color: white;
-            font-size: 1.5rem;
-            padding: 20px 50px;
-            border: none;
-            border-radius: 50px;
-            box-shadow: 0 8px 25px rgba(255,68,68,0.3);
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            animation: pulse 2s infinite;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(255,68,68,0.4);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* Pain Points Section */
-        .pain-section {
-            background: #2C2C2C;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .pain-section h2 {
-            font-size: 2.5rem;
-            color: #FFFFFF;
-            margin-bottom: 50px;
-        }
-
-        .pain-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .pain-card {
-            background: rgba(255,68,68,0.1);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid #FF4444;
-        }
-
-        .pain-card .emoji {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .pain-card h3 {
-            color: #FF4444;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .pain-card p {
-            color: #CCCCCC;
-        }
-
-        .pain-warning {
-            margin-top: 60px;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #FF4444;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.5; }
-        }
-
-        /* Product Section */
-        .product-section {
-            background: #FFFFFF;
-            padding: 80px 20px;
-        }
-
-        .product-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-
-        .product-image {
-            flex: 0 0 40%;
-            min-width: 300px;
-        }
-
-        .product-image .placeholder {
-            width: 100%;
-            height: 400px;
-            background: #f0f0f0;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: #666;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        .product-details {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .product-details h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .feature-item .emoji {
-            font-size: 2rem;
-            margin-right: 20px;
-        }
-
-        .feature-item h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .feature-item p {
-            color: #666;
-        }
-
-        /* Steps Section */
-        .steps-section {
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        .steps-section h3 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 40px;
-        }
-
-        .steps-flow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .step-item {
-            text-align: center;
-        }
-
-        .step-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 3rem;
-            color: white;
-            font-weight: bold;
-        }
-
-        .step-circle.red {
-            background: #FF4444;
-        }
-
-        .step-circle.green {
-            background: #00CC66;
-        }
-
-        .step-item p {
-            font-weight: 600;
-        }
-
-        .arrow {
-            font-size: 2rem;
-            color: #CCC;
-        }
-
-        .steps-result {
-            font-size: 1.5rem;
-            color: #FF4444;
-            font-weight: 700;
-            margin-top: 30px;
-        }
-
-        /* Comparison Section */
-        .comparison-section {
-            background: #F8F9FA;
-            padding: 80px 20px;
-        }
-
-        .comparison-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .comparison-content h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 50px;
-        }
-
-        .comparison-table {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow-x: auto;
-            margin-bottom: 40px;
-        }
-
-        .comparison-table table {
-            width: 100%;
-            font-size: 1.2rem;
-            border-collapse: collapse;
-        }
-
-        .comparison-table th {
-            padding: 20px;
-            background: #FF4444;
-            color: white;
-        }
-
-        .comparison-table th.green {
-            background: #00CC66;
-        }
-
-        .comparison-table td {
-            padding: 15px;
-            border-bottom: 1px solid #EEE;
-        }
-
-        .comparison-table td:first-child {
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .comparison-table .red-text {
-            color: #FF4444;
-            font-weight: 600;
-        }
-
-        .comparison-table .green-text {
-            color: #00CC66;
-            font-weight: 600;
-        }
-
-        .calculator-box {
-            padding: 30px;
-            background: linear-gradient(135deg, #FF4444, #FF6666);
-            border-radius: 15px;
-            color: white;
-        }
-
-        .calculator-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .calculator-box p {
-            font-size: 1.3rem;
-        }
-
-        .calculator-box strong {
-            font-size: 1.5rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.4rem;
-            }
-
-            .price-main {
-                font-size: 2rem;
-            }
-
-            .cta-button {
-                font-size: 1.2rem;
-                padding: 15px 30px;
-            }
-
-            .pain-section h2 {
-                font-size: 2rem;
-            }
-
-            .product-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .product-image {
-                flex: none;
-            }
-
-            .product-details h2 {
-                font-size: 2rem;
-            }
-
-            .steps-flow {
-                flex-direction: column;
-            }
-
-            .arrow {
-                transform: rotate(90deg);
-            }
-
-            .comparison-content h2 {
-                font-size: 2rem;
-            }
-
-            .price-comparison {
-                flex-direction: column;
-                text-align: center;
-                gap: 5px;
-            }
-
-            .hero {
-                height: 90vh;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .pain-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .comparison-table {
-                padding: 20px;
-            }
-
-            .comparison-table table {
-                font-size: 1rem;
-            }
-
-            .comparison-table th,
-            .comparison-table td {
-                padding: 10px;
-            }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        /* Pain Points */
+        .pain { background: #2C2C2C; padding: 60px 20px; text-align: center; }
+        .pain h2 { font-size: 2rem; color: #fff; margin-bottom: 40px; }
+        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .pain-card { background: rgba(255,68,68,0.1); padding: 24px; border-radius: 15px; border-left: 5px solid #FF4444; text-align: left; }
+        .pain-card .icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .pain-card h3 { color: #FF4444; margin-bottom: 8px; font-size: 1.1rem; }
+        .pain-card p { color: #ccc; font-size: 0.95rem; }
+        .pain-warn { margin-top: 40px; font-size: 1.5rem; font-weight: 700; color: #FF4444; animation: blink 1.5s infinite; }
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        /* Product */
+        .product { background: #fff; padding: 60px 20px; }
+        .product-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .product-img { flex: 1 1 300px; text-align: center; }
+        .product-img img { border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .product-info { flex: 1 1 400px; }
+        .product-info h2 { font-size: 2rem; margin-bottom: 30px; }
+        .feature { display: flex; align-items: flex-start; margin-bottom: 20px; gap: 16px; }
+        .feature .fi { font-size: 1.8rem; flex-shrink: 0; }
+        .feature h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+        .feature p { color: #666; font-size: 0.9rem; }
+
+        /* Detail Images */
+        .details { background: #f5f5f5; padding: 60px 20px; }
+        .details-inner { max-width: 1000px; margin: 0 auto; }
+        .details h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+        .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .detail-grid img { border-radius: 12px; width: 100%; }
+
+        /* Video */
+        .video-section { background: #1a1a1a; padding: 60px 20px; text-align: center; }
+        .video-section h2 { color: #fff; font-size: 2rem; margin-bottom: 30px; }
+        .video-section p { color: #aaa; margin-bottom: 20px; }
+        .video-section video { max-width: 400px; width: 100%; border-radius: 12px; }
+
+        /* Steps */
+        .steps { background: #fff; padding: 60px 20px; text-align: center; }
+        .steps h2 { font-size: 2rem; margin-bottom: 40px; }
+        .steps-row { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .step-circle { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #fff; font-weight: 900; }
+        .step-circle.red { background: #FF4444; }
+        .step-circle.green { background: #00CC66; }
+        .step-label { font-weight: 600; margin-top: 8px; }
+        .step-item { text-align: center; }
+        .step-arrow { font-size: 1.5rem; color: #ccc; }
+        .steps .tagline { font-size: 1.3rem; color: #FF4444; font-weight: 700; margin-top: 30px; }
+
+        /* Compare */
+        .compare-section { background: #F8F9FA; padding: 60px 20px; }
+        .compare-section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+        .table-wrap { max-width: 700px; margin: 0 auto; background: #fff; border-radius: 15px; padding: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+        thead tr { background: #FF4444; color: #fff; }
+        th, td { padding: 14px 16px; text-align: center; }
+        th:first-child, td:first-child { text-align: left; font-weight: 600; }
+        thead th:last-child { background: #00CC66; }
+        tbody tr { border-bottom: 1px solid #eee; }
+        .red { color: #FF4444; font-weight: 600; }
+        .green { color: #00CC66; font-weight: 600; }
+
+        /* Calculator */
+        .calc { max-width: 700px; margin: 30px auto 0; padding: 24px; background: linear-gradient(135deg, #FF4444, #FF6666); border-radius: 15px; color: #fff; text-align: center; }
+        .calc h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .calc p { font-size: 1.1rem; }
+        .calc strong { font-size: 1.4rem; }
+
+        /* Spec */
+        .spec { background: #fff; padding: 60px 20px; text-align: center; }
+        .spec h2 { font-size: 2rem; margin-bottom: 30px; }
+        .spec img { max-width: 400px; border-radius: 12px; }
+
+        /* Final CTA */
+        .final-cta { background: linear-gradient(135deg, #FF4444, #CC0000); padding: 60px 20px; text-align: center; color: #fff; }
+        .final-cta h2 { font-size: 2rem; margin-bottom: 16px; }
+        .final-cta .price { font-size: 2.5rem; font-weight: 900; margin-bottom: 24px; }
+        .final-cta .price .was { font-size: 1.3rem; text-decoration: line-through; opacity: 0.7; margin-right: 10px; }
+        .final-cta .cta-btn { background: #fff; color: #FF4444; }
+        .final-cta .trust { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero h2 { font-size: 1.1rem; }
+            .price-box .final { font-size: 1.5rem; }
+            .product-inner { flex-direction: column; }
+            .pain h2, .product-info h2, .details h2, .steps h2, .compare-section h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>靠！廚房又堵了？<br>叫水電工要等3小時、花$2000</h1>
-            
-            <h2>現在30秒自己搞定<br>一瓶解決，終身受用</h2>
-            
-            <div class="price-box">
-                <div class="price-comparison">
-                    <span class="crossed-out">水電工收費：$2,000～$3,500</span>
-                    <span class="save-amount">省下 $1,600！</span>
-                </div>
-                <div class="price-main">
-                    限時特價：<span class="old-price">$1,299</span> → $899
-                </div>
-            </div>
-            
-            <a href="#purchase" class="cta-button">
-                🔥 立刻救急下單（24h內到貨）
-            </a>
-        </div>
-    </section>
 
-    <!-- Pain Points Section -->
-    <section class="pain-section">
-        <h2>不處理會發生什麼事？</h2>
-        
-        <div class="pain-grid">
-            <div class="pain-card">
-                <div class="emoji">🦠</div>
-                <h3>細菌瘋狂繁殖</h3>
-                <p>積水中的細菌每20分鐘繁殖一倍<br>全家人健康都受威脅</p>
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>靠！廚房又堵了？<br>叫水電工要等3小時、花$2000</h1>
+        <h2>現在30秒自己搞定<br>一瓶解決，終身受用</h2>
+        <div class="price-box">
+            <div class="compare">
+                <span class="old">水電工收費：$2,000～$3,500</span>
+                <span class="save">省下 $1,600！</span>
             </div>
-            
-            <div class="pain-card">
-                <div class="emoji">🤢</div>
-                <h3>噁心臭味擴散</h3>
-                <p>下水道臭味倒灌<br>整間屋子都是臭味</p>
-            </div>
-            
-            <div class="pain-card">
-                <div class="emoji">⏰</div>
-                <h3>水電工要等半天</h3>
-                <p>預約、等待、陌生人進屋<br>半夜緊急狀況還要加價2倍</p>
-            </div>
+            <div class="final"><span class="was">$1,299</span> → $899</div>
         </div>
-        
-        <div class="pain-warning">
-            別讓小問題變成大災難！
-        </div>
-    </section>
+        <a href="#" class="cta-btn">🔥 立刻救急下單（24h內到貨）</a>
+    </div>
+</section>
 
-    <!-- Product Section -->
-    <section class="product-section">
-        <div class="product-content">
-            <div class="product-image">
-                <img src="product-clean.webp" alt="廚房水管疏通劑" style="width:100%; height:auto; border-radius:15px;">
-                </div>
+<!-- Pain Points -->
+<section class="pain">
+    <h2>不處理會發生什麼事？</h2>
+    <div class="pain-grid">
+        <div class="pain-card">
+            <div class="icon">🦠</div>
+            <h3>細菌瘋狂繁殖</h3>
+            <p>積水中的細菌每20分鐘繁殖一倍<br>全家人健康都受威脅</p>
+        </div>
+        <div class="pain-card">
+            <div class="icon">🤢</div>
+            <h3>噁心臭味擴散</h3>
+            <p>下水道臭味倒灌<br>整間屋子都是臭味</p>
+        </div>
+        <div class="pain-card">
+            <div class="icon">⏰</div>
+            <h3>水電工要等半天</h3>
+            <p>預約、等待、陌生人進屋<br>半夜緊急狀況還要加價2倍</p>
+        </div>
+    </div>
+    <div class="pain-warn">別讓小問題變成大災難！</div>
+</section>
+
+<!-- Product -->
+<section class="product">
+    <div class="product-inner">
+        <div class="product-img">
+            <img src="product-clean.webp" alt="產品照片">
+        </div>
+        <div class="product-info">
+            <h2>為什麼這瓶這麼威？</h2>
+            <div class="feature">
+                <span class="fi">💪</span>
+                <div><h3>德國進口活性酵素</h3><p>30秒分解頑固油垢，比傳統疏通劑快10倍</p></div>
             </div>
-            
-            <div class="product-details">
-                <h2>為什麼這瓶這麼威？</h2>
-                
-                <div class="feature-item">
-                    <span class="emoji">💪</span>
-                    <div>
-                        <h3>德國進口活性酵素</h3>
-                        <p>30秒分解頑固油垢，比傳統疏通劑快10倍</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <span class="emoji">🧪</span>
-                    <div>
-                        <h3>台灣SGS認證無毒</h3>
-                        <p>用完直接洗菜都安全，家有小孩也放心</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <span class="emoji">⚡</span>
-                    <div>
-                        <h3>1080度全方位滲透</h3>
-                        <p>彎管直管通通搞定，連U型管都能清乾淨</p>
-                    </div>
-                </div>
-                
-                <div class="feature-item">
-                    <span class="emoji">🛡️</span>
-                    <div>
-                        <h3>MIT台灣製造</h3>
-                        <p>品質穩定不傷管線，一瓶可用20次以上</p>
-                    </div>
-                </div>
+            <div class="feature">
+                <span class="fi">🧪</span>
+                <div><h3>台灣SGS認證無毒</h3><p>用完直接洗菜都安全，家有小孩也放心</p></div>
+            </div>
+            <div class="feature">
+                <span class="fi">⚡</span>
+                <div><h3>1080度全方位滲透</h3><p>彎管直管通通搞定，連U型管都能清乾淨</p></div>
+            </div>
+            <div class="feature">
+                <span class="fi">🛡️</span>
+                <div><h3>MIT台灣製造</h3><p>品質穩定不傷管線，一瓶可用20次以上</p></div>
             </div>
         </div>
-        
-        <!-- Usage Steps -->
-        <div class="steps-section">
-            <h3>使用超簡單</h3>
-            <div class="steps-flow">
-                <div class="step-item">
-                    <div class="step-circle red">1</div>
-                    <p>倒入疏通劑</p>
-                </div>
-                <div class="arrow">→</div>
-                <div class="step-item">
-                    <div class="step-circle red">2</div>
-                    <p>等待30秒</p>
-                </div>
-                <div class="arrow">→</div>
-                <div class="step-item">
-                    <div class="step-circle green">✓</div>
-                    <p>沖水完成！</p>
-                </div>
-            </div>
-            <div class="steps-result">
-                就是這麼簡單！
-            </div>
+    </div>
+</section>
+
+<!-- Detail Images -->
+<section class="details">
+    <h2>產品細節</h2>
+    <div class="detail-grid">
+        <img src="filter-detail.webp" alt="產品細節">
+        <img src="filter-usage.webp" alt="使用方式">
+        <img src="storage-mode.webp" alt="多功能收納">
+    </div>
+</section>
+
+<!-- Video -->
+<section class="video-section">
+    <h2>30秒看懂怎麼用</h2>
+    <p>點擊播放 ▶</p>
+    <video src="product-video.mp4" controls playsinline preload="metadata" poster="hero-usage.webp"></video>
+</section>
+
+<!-- Steps -->
+<section class="steps">
+    <h2>使用超簡單</h2>
+    <div class="steps-row">
+        <div class="step-item">
+            <div class="step-circle red">1</div>
+            <p class="step-label">倒入疏通劑</p>
         </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="comparison-section">
-        <div class="comparison-content">
-            <h2>算算看，你省了多少錢？</h2>
-            
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>叫水電工</th>
-                            <th class="green">用這瓶產品</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>費用</td>
-                            <td class="red-text">$2,000起</td>
-                            <td class="green-text">$899</td>
-                        </tr>
-                        <tr>
-                            <td>等待時間</td>
-                            <td class="red-text">2-4小時</td>
-                            <td class="green-text">30秒</td>
-                        </tr>
-                        <tr>
-                            <td>陌生人進屋</td>
-                            <td class="red-text">是</td>
-                            <td class="green-text">否</td>
-                        </tr>
-                        <tr>
-                            <td>可重複使用</td>
-                            <td class="red-text">否</td>
-                            <td class="green-text">是（20次+）</td>
-                        </tr>
-                        <tr>
-                            <td>半夜緊急</td>
-                            <td class="red-text">加價2倍</td>
-                            <td class="green-text">立刻解決</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="calculator-box" id="purchase">
-                <h3>💰 省錢計算機</h3>
-                <p>
-                    一次水電工費用 = 2.2瓶產品價格<br>
-                    但這瓶可以用20次 = <strong>省下$39,000！</strong>
-                </p>
-            </div>
+        <span class="step-arrow">→</span>
+        <div class="step-item">
+            <div class="step-circle red">2</div>
+            <p class="step-label">等待30秒</p>
         </div>
-    </section>
+        <span class="step-arrow">→</span>
+        <div class="step-item">
+            <div class="step-circle green">✓</div>
+            <p class="step-label">沖水完成！</p>
+        </div>
+    </div>
+    <p class="tagline">就是這麼簡單！</p>
+</section>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<!-- Compare -->
+<section class="compare-section">
+    <h2>算算看，你省了多少錢？</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr><th></th><th>叫水電工</th><th>用這瓶產品</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>費用</td><td class="red">$2,000起</td><td class="green">$899</td></tr>
+                <tr><td>等待時間</td><td class="red">2-4小時</td><td class="green">30秒</td></tr>
+                <tr><td>陌生人進屋</td><td class="red">是</td><td class="green">否</td></tr>
+                <tr><td>可重複使用</td><td class="red">否</td><td class="green">是（20次+）</td></tr>
+                <tr><td>半夜緊急</td><td class="red">加價2倍</td><td class="green">立刻解決</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="calc">
+        <h3>💰 省錢計算機</h3>
+        <p>一次水電工費用 = 2.2瓶產品價格<br>但這瓶可以用20次 = <strong>省下$39,000！</strong></p>
+    </div>
+</section>
 
-        // Add some interactive hover effects
-        document.querySelectorAll('.pain-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.05)';
-                this.style.transition = 'transform 0.3s ease';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
-        });
-    </script>
+<!-- Spec -->
+<section class="spec">
+    <h2>產品規格</h2>
+    <img src="product-spec.webp" alt="產品規格尺寸">
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <h2>別再花冤枉錢叫水電工了</h2>
+    <div class="price"><span class="was">$1,299</span>$899</div>
+    <a href="#" class="cta-btn">🔥 立刻救急下單（24h內到貨）</a>
+    <p class="trust">🚚 24小時內出貨 | 🔄 7天鑑賞期 | ⭐ 好評 4.9/5</p>
+</section>
+
 </body>
 </html>
